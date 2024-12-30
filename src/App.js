@@ -5,8 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Game from './pages/Game';
 import ScoreBoard from './pages/ScoreBoard';
-import ScoreBoardX from './pages/ScoreBoard copy';
 import Navigationbar from './component/NavigationBar';
+import Profile from './pages/Profile';
 
 
 function App() {
@@ -15,10 +15,10 @@ function App() {
     <div className="App">
       <Navigationbar/>
       <Routes>
-          <Route path={"/"} element={<Homepage/>}></Route>
-          <Route path={"game"} element={<Game/>}></Route>
-          <Route path={"scoreboard"} element={<ScoreBoard/>}></Route>
-          <Route path={"scoreboardx"} element={<ScoreBoardX/>}></Route>
+          <Route path="/" element={<Homepage/>}></Route>
+          <Route path="/game/:playerName" element={<Game/>}></Route>
+          <Route path="/profile/:playerName" element={<Profile/>}></Route>
+          <Route path="/scoreboard" element={<ScoreBoard/>}></Route>
 
       </Routes>
 
